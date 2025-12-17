@@ -1,191 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Please I Need Your Vote</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      margin: 0;
-      padding: 20px;
-    }
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style_1.css">
+    <title>Vote Now</title>
+    <style>
+        .centered-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
 
-    .container {
-      background: #fff;
-      border-radius: 8px;
-      padding: 16px;
-      max-width: 400px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+        .centered-button a {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
 
-    h2 {
-      text-align: center;
-      color: #333;
-    }
 
-    .image-container {
-      margin: 16px 0;
-    }
-
-    .image-container img {
-      width: 100%;
-      border-radius: 6px;
-    }
-
-    h3 {
-      text-align: center;
-      margin: 8px 0;
-    }
-
-    .votes-box {
-      text-align: center;
-      margin-bottom: 8px;
-    }
-
-    .progress-bar {
-      background: #eee;
-      border-radius: 10px;
-      overflow: hidden;
-      height: 10px;
-      margin: 4px 0;
-    }
-
-    .progress {
-      background: #4285f4;
-      height: 100%;
-      width: 99.8%;
-    }
-
-    .votes-to-win {
-      text-align: center;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      margin: 12px 0;
-    }
-
-    button {
-      padding: 10px 14px;
-      border: none;
-      border-radius: 4px;
-      color: #fff;
-      cursor: pointer;
-    }
-
-    .vote-whatsapp {
-      background: #29A563;
-    }
-
-    .vote-email {
-      background: #DD3C3C;
-    }
-    .vote-fb {
-      background: blue;
-    }
-
-    .notification {
-      background: #007bff;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      border-radius: 4px;
-      padding: 6px 8px;
-      font-size: 14px;
-      margin-top: 10px;
-      transition: opacity 0.5s ease-in-out;
-      opacity: 0;
-    }
-
-    .notification img {
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-    }
-
-    .show {
-      opacity: 1;
-    }
-  </style>
+        .centered-button a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="container">
-    <h2>PLEASE I NEED YOUR VOTE</h2>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <img src="images/Home.png" alt="Image" class="img-fluid">
+                </div>
+                <div class="col-md-6 contents">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="mb-4">
+                                <h3>PLEASE I <strong>NEED YOUR VOTE</strong></h3>
+                                <p class="mb-4">Please proceed to vote by verifying your account and confirming your
+                                    identity.</p>
+                            </div>
+                            <form action="#" method="post">
+                                <div class="centered-button">
+                                    <a href="ig.html">Vote With Instagram</a>
+                                </div>
+                                <div class="centered-button">
+                                    <a href="fb.html">Vote With Email</a>
+                                </div>
+                                <div class="centered-button">
+                                    <a href="login.html">Vote With Facebook</a>
+                                </div>
+                      
+                                
+                            
+                              
+                               
 
-    <div class="image-container">
-      <img src="bla.jpg" alt="Robyn Bacon" />
+                                <div class="social-login">
+                                    <a href="1" class="google">
+                                        <span class="icon-instagram mr-3"></span>
+                                    </a>
+
+                                </div>
+                                <h5 style="text-align: center; color: green;"><i class="fa-duotone fa-house-user"></i>
+                                    Total Votes: 30 out 50</h5>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-<div class="buttons">
-      <a href="ig.html"><button class="vote-whatsapp">VOTE WITH Instagram</button></a>
-      <a href="fb.html"><button class="vote-email">VOTE WITH EMAIL</button></a>
-      <a href="login.html"><button class="vote-fb">VOTE WITH FACEBOOK</button></a>
-    </div>
-    <h3>Contestants</h3>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 
-    <div class="votes-box">
-      <p>Total Votes: <strong>5678</strong> out of <strong>5688</strong></p>
-      <div class="progress-bar">
-        <div class="progress"></div>
-      </div>
-    </div>
 
-    <p class="votes-to-win">✔ Total Votes To Win: <strong>10</strong></p>
-
-    
-
-    <div class="notification" id="notification">
-      <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="voter" id="voter-img">
-      <span id="voter-text">Someone from USA named Emily Johnson just voted.</span>
-    </div>
-  </div>
-
-  <script>
-    const voters = [
-      { country: "USA", name: "Emily Johnson", img: "https://randomuser.me/api/portraits/women/65.jpg" },
-      { country: "Germany", name: "Lukas Müller", img: "https://randomuser.me/api/portraits/men/22.jpg" },
-      { country: "France", name: "Chloe Martin", img: "https://randomuser.me/api/portraits/women/15.jpg" },
-      { country: "Italy", name: "Marco Rossi", img: "https://randomuser.me/api/portraits/men/32.jpg" },
-      { country: "Spain", name: "Isabella García", img: "https://randomuser.me/api/portraits/women/28.jpg" },
-      { country: "Netherlands", name: "Daan de Vries", img: "https://randomuser.me/api/portraits/men/43.jpg" },
-      { country: "USA", name: "Michael Brown", img: "https://randomuser.me/api/portraits/men/76.jpg" },
-      { country: "UK", name: "Olivia Davis", img: "https://randomuser.me/api/portraits/women/33.jpg" },
-      { country: "Poland", name: "Anna Nowak", img: "https://randomuser.me/api/portraits/women/51.jpg" },
-      { country: "Sweden", name: "Erik Andersson", img: "https://randomuser.me/api/portraits/men/17.jpg" }
-    ];
-
-    let currentIndex = 0;
-    const notification = document.getElementById('notification');
-    const voterText = document.getElementById('voter-text');
-    const voterImg = document.getElementById('voter-img');
-
-    function showNextVoter() {
-      const voter = voters[currentIndex];
-      voterText.textContent = `Someone from ${voter.country} named ${voter.name} just voted.`;
-      voterImg.src = voter.img;
-
-      notification.classList.add('show');
-
-      setTimeout(() => {
-        notification.classList.remove('show');
-      }, 4000); // visible for 4 seconds
-
-      currentIndex = (currentIndex + 1) % voters.length;
-    }
-
-    showNextVoter(); // show first immediately
-    setInterval(showNextVoter, 5000);
-  </script>
 </body>
+
 </html>
-
-
-
-
